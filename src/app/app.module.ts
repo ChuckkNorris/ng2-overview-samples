@@ -4,13 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HighlightColorDirective } from './directives/highlight-color.directive';
 import { HoverColorDirective } from './directives/hover-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightColorDirective,
     HoverColorDirective,
   ],
   imports: [

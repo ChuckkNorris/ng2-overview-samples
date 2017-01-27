@@ -12,7 +12,6 @@ export class HoverColorDirective {
     this.originalColor = this.element.nativeElement.style.backgroundColor;
   }
 
-  // subscribe to host element's mouseenter event
   @HostListener('mouseenter') onMouseEnter() {
     this.setBackgroundColor(this.hoverColor);
   }
