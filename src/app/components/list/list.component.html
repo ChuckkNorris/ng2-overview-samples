@@ -1,0 +1,7 @@
+<fieldset class="checkboxgroup">
+    <p>{{title}}</p>
+    <label *ngFor="let item of items">
+      <input type="checkbox" [value]="item[valueProperty]" (change)="onChange($event)">
+      {{item[displayProperty]}}
+    </label>
+</fieldset>

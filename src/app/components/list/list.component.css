@@ -1,0 +1,12 @@
+.checkboxgroup{
+    width: 0em;
+    overflow: auto;
+}
+.checkboxgroup p{
+    width: 7em;
+    text-align: center;
+}
+.checkboxgroup label{
+    width: 12em;
+    float: right;
+}

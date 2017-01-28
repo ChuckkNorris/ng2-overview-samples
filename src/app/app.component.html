@@ -1,3 +1,12 @@
+<app-list 
+    hoverColor="green" 
+    [items]="myItems" 
+    title="My Custom List" 
+    displayProperty="name" 
+    valueProperty="name" 
+    [(selectedValues)]="selected"></app-list>
+{{selected | json}}
+{{3 | convertEuro:'Test':true}}
+<br> <br>
 <button hoverColor="green">My Button</button>
 <h2 hoverColor="red">{{title}}</h2>
-<app-grid [items]="myItems" header="name" value="age"></app-grid>

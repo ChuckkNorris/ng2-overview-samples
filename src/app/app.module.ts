@@ -5,17 +5,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HoverColorDirective } from './directives/hover-color.directive';
-import { GridComponent } from './components/grid/grid.component';
+import { ListComponent } from './components/list/list.component';
+import { ConvertEuroPipe } from './pipes/convert-euro.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HoverColorDirective,
-    GridComponent,
+    ListComponent,
+    ConvertEuroPipe,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, 
     HttpModule
   ],
   providers: [],
