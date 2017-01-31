@@ -1,3 +1,8 @@
+<h4>If I had a Pound for every second, I'd have this many Euros...</h4>
+<p>{{price | convertMoney:'EUR':'GBP'}}</p>
+
+<br> <br><br> <br>
+
 <app-list 
     hoverColor="green" 
     [items]="myItems" 
@@ -6,7 +11,7 @@
     valueProperty="name" 
     [(selectedValues)]="selected"></app-list>
 {{selected | json}}
-{{3 | convertEuro:'Test':true}}
-<br> <br>
+
+
 <button hoverColor="green">My Button</button>
 <h2 hoverColor="red">{{title}}</h2>
