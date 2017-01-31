@@ -7,10 +7,14 @@ import { CurrencyService } from './services/currency.service';
   providers: [CurrencyService]
 })
 export class AppComponent implements OnInit {
+  myValue='Initial Value';
+  
   constructor(private _currencyService: CurrencyService) {}
   ngOnInit() {
     this.convertToRupees();
   }
+
+  
 
   convertToRupees() {
     let rupeeCode = 'INR';

@@ -1,3 +1,9 @@
+{{myValue}}<br>
+<label>No Binding <input value="myValue"></label><br>
+<label>One-Way Binding <input [value]="myValue"></label><br>
+<label>Two-Way Binding <input [(ngModel)]="myValue"></label><br>
+
+
 <h4>If I had a Pound for every second, I'd have this many Euros...</h4>
 <p>{{price | convertMoney:'EUR':'GBP'}}</p>
 
