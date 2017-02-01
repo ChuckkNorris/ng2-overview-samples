@@ -12,12 +12,15 @@
 <app-list 
     hoverColor="green" 
     [items]="myItems" 
-    title="My Custom List" 
+    [title]="myTitle" 
     displayProperty="name" 
     valueProperty="name" 
     [(selectedValues)]="selected"></app-list>
-{{selected | json}}
+{{selected | json}} 
+
+<button (click)="updateTitle()">Update Title</button>
+<button (click)="addItems()">Add Items</button>
 
 
-<button hoverColor="green">My Button</button>
-<h2 hoverColor="red">{{title}}</h2>
+<button hoverColor="purple">My Button</button>
+<h2 hoverColor="red">{{myTitle}}</h2>

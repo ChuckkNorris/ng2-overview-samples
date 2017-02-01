@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export class ListComponent implements OnChanges {
 
   @Input() items: any[];
   @Input() displayProperty: string;
@@ -14,6 +14,11 @@ export class ListComponent {
 
   @Input() selectedValues:any[] = [];
   @Output() selectedValuesChange: EventEmitter<any[]> = new EventEmitter();
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('On Changes Called!');
+    console.log(changes);
+  }
 
   onChange(event) {
     if (!this.selectedValues)

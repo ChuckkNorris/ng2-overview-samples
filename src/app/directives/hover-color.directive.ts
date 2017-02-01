@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class HoverColorDirective {
 
   private originalColor: string;
-  @Input() hoverColor: string; 
+  @Input() hoverColor: string;
 
   constructor(private element: ElementRef) { 
     this.originalColor = this.element.nativeElement.style.backgroundColor;

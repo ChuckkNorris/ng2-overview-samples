@@ -14,13 +14,30 @@ export class AppComponent implements OnInit {
     this.convertToRupees();
   }
 
-  
+    myItems = [
+    { name: "Jeff", id: 23, isDeveloper: true },
+    { name: "Hank", id: 19, isDeveloper: false },
+    { name: "Ted", id: 34, isDeveloper: true }
+  ];
+
+  myTitle: string = 'My Custom List';
+
+  updateTitle() {
+    console.log('Update title clicked');
+    this.myTitle = 'Totally a different title';
+  }
+
+  addItems() {
+    console.log('Add Item clicked!');
+    this.myItems.push({name: 'Roger', id: 2, isDeveloper: false});
+  }
+
 
   convertToRupees() {
     let rupeeCode = 'INR';
     let dollars = 124.79;
     this._currencyService.convertCurrency(dollars, rupeeCode).subscribe(amountAsRupees => {
-      console.log('$' + dollars + ' is worth ' + amountAsRupees + ' Rupees');
+      //console.log('$' + dollars + ' is worth ' + amountAsRupees + ' Rupees');
     });
   }
  
@@ -30,8 +47,3 @@ export class AppComponent implements OnInit {
  // setInterval(() => this.price++, 1000);
   //  price: number = 1;
 
-  // myItems = [
-  //   { name: "Jeff", id: 23, isDeveloper: true },
-  //   { name: "Hank", id: 19, isDeveloper: false },
-  //   { name: "Ted", id: 34, isDeveloper: true }
-  // ];
